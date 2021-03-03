@@ -1,0 +1,111 @@
+.side-box-1{
+    top: 0%;
+    right: 0%;
+    background-color: #FFDECE;
+    height: 570px;
+    width: 500px;
+}
+.side-box-2{
+    top: 0%;
+    left: 0%;
+    background-color: #FFDECE;
+    height: 570px;
+    width: 80vw;
+}
+
+#section-two{
+    background-color: #FFDECE;
+    height: 400px;
+}
+
+.welcome-title h1{
+    font-family: "Poppins-ExtraBold";
+    font-weight: 800;
+    color: #FD9B6A;
+}
+
+.we-do{
+    top: -10%;
+}
+
+.intro-section h3{
+    font-family: "Poppins-SemiBold";
+    font-weight: 800;
+    color: black;
+
+}
+
+p{
+    color: #707070 !important;
+}
+
+.underline{
+    height: 15px;
+    width: 120px;
+    background-color: #FD9B6A;
+    top: 20px;
+    z-index: 1;
+}
+
+.z-1{
+    z-index: 5;
+}
+
+@media (max-width:  992px) {
+    .underline{
+        left: 50vw;
+        background-color: #FD9B6A;
+        top: 0;
+        z-index: 1;
+    }
+
+    .side-box-1{
+        top: 35%;
+        right: 0%;
+        background-color: #FFDECE;
+        height: 570px;
+        width: 500px;
+    }
+
+    .side-box-2{
+        top: 0%;
+        left: 0%;
+        background-color: #FFDECE;
+        height: 800px;
+        width: 100vw;
+    }
+
+  }
+
+
+  .footer-text{
+      font-family: 'Poppins-Thin';
+      font-size: 1rem;
+  }
+
+
+  .test-container{
+      height: 150px;
+      width: 150px;
+  }
+
+  .test-title{
+    font-family: "Poppins-SemiBold";
+    font-weight: 800;
+    color:#FD9B6A;
+  }
+
+  .slant-mid{
+      font-family: "Poppins-LightItalic";
+      color: rgb(87, 87, 87);
+  }
+  .slant-thick{
+      font-family: "Poppins-SemiBoldItalic";
+  }
+
+  .carousel-indicators li{
+      background-color: rgb(151, 151, 151);
+  }
+  .carousel-indicators .active{
+      background-color: #FD9B6A;
+  }

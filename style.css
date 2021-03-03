@@ -1,0 +1,642 @@
+:root {
+    --orange-color: #FD9B6A;
+    --dark-blue-color: #0d102e;
+    --fade-ash-color: rgba(0, 4, 35, 0.502);
+  }
+
+
+  @font-face {
+    font-family: Poppins-ExtraBold;
+    src: url('./font/poppins/Poppins-ExtraBold.ttf'); 
+  }
+  @font-face {
+    font-family: Poppins-Regular;
+    src: url('./font/poppins/Poppins-Regular.ttf'); 
+  }
+
+  @font-face {
+    font-family: Poppins-SemiBold;
+    src: url('./font/poppins/Poppins-SemiBold.ttf'); 
+  }
+
+  @font-face {
+    font-family: Poppins-Thin;
+    src: url('./font/poppins/Poppins-Thin.ttf'); 
+  }
+
+  @font-face {
+    font-family: Poppins-LightItalic;
+    src: url('./font/poppins/Poppins-LightItalic.ttf'); 
+  }
+
+  @font-face {
+    font-family: Poppins-SemiBoldItalic;
+    src: url('./font/poppins/Poppins-SemiBoldItalic.ttf'); 
+  }
+
+  /* @font-face {
+    font-family: opensans-light;
+    src: url('../../../fonts/open-sans/OpenSans-Light.ttf'); 
+  }
+
+  @font-face {
+    font-family: opensans-Bold;
+    src: url('../../../fonts/open-sans/OpenSans-Bold.ttf'); 
+  } */
+
+*{
+    font-family:'Poppins-Regular';
+    font-style: normal;
+}
+
+.nav-item a{
+ color:  #0d102e;
+}
+.nav-item a:hover{
+ font-weight: bold;
+}
+
+.sm-text{
+  font-size: 0.8rem;
+}
+
+
+
+/* orange-outline demo button */
+.btn-orange-outline{
+ background-color: transparent;
+ color:#FD9B6A;
+ border-color: #FD9B6A;
+box-shadow: none;
+border-radius: 19px;
+}
+
+.btn-lg.btn-orange-outline{
+border-radius: 24px;
+}
+
+.btn-orange-outline:hover{
+    background-color:#FD9B6A;
+    color:white ;
+    border-color:#FD9B6A; 
+}
+.btn-orange-outline:focus{
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(255, 196, 0, 0.25);
+}
+
+.btn-orange:hover{
+    background-color:#FD9B6A;
+    color:white ;
+    border-color: #FD9B6A;
+}
+
+/* orange-fill button */
+.btn-orange-fill{
+    background-color:#FD9B6A;
+    color:white ;
+    border-color: #FD9B6A;
+    box-shadow: none;
+    border-radius: 19px;
+}
+
+.btn-lg.btn-orange-fill{
+    border-radius: 24px;
+    
+    }
+
+.btn-orange-fill:hover{
+    background-color: transparent;
+    color: #FD9B6A;
+    border-color:#FD9B6A;   
+   }
+   .btn-orange-fill:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 196, 0, 0.25);
+  }
+
+.dark-blue{
+    color: #0d102e;
+}
+
+.btn-dark-blue{
+  background-color: #0d102e;
+  color:white ;
+  border-color: #0d102e;
+  box-shadow: none;
+}
+
+.btn-dark-blue:hover{
+  color: white;
+  cursor: pointer;
+  }
+  
+
+.btn-dark-blue:focus{
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(13, 16, 46, 0.589);
+}
+
+
+/* costom check box a little bit complex*/
+.cbx {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.cbx:not(p) {
+  margin-right: 6px;
+}
+
+.cbx span {
+  float: left;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+.cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  transform: scale(1);
+  border: 1px solid #0d102e;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 1px rgba(0,16,75,0.05);
+}
+.cbx span:first-child svg {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+.cbx p {
+  padding-left: 8px;
+  line-height: 18px;
+}
+.cbx:hover span:first-child {
+  border-color: #0d102e;
+}
+.inp-cbx {
+  position: absolute;
+  visibility: hidden;
+  
+}
+.inp-cbx:checked + .cbx span:first-child {
+  background: #0d102e;
+  border-color: #0d102e;
+  animation: wave 0.4s ease;
+}
+.inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+label p{
+    display: inline;
+}
+
+
+
+/* rating stars stying */
+.rating {
+  float: left;
+  border: none;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+ follow these rules. Every browser that supports :checked also supports :not(), so
+ it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+  clip: rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+  float: right;
+  width: 1em;
+  padding: 0 .1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 200%;
+  line-height: 1.2;
+  color: #ddd;
+}
+
+.rating:not(:checked) > label:before {
+  content: '★ ';
+}
+
+.rating > input:checked ~ label {
+  color: #0d102e;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #0d102e53;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #0d102ece;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bg-dark-blue{
+    background-color: #0d102e;
+}
+
+.bg-orange{
+    background-color: #FD9B6A;
+}
+
+.container-xl .navbar-toggler{
+   border-color: #0d102e; 
+}
+
+.active{
+    font-weight: bolder;
+}
+
+
+
+
+  .bd-placeholder-img1{
+    background: url(./img/img1.jpg) 
+    no-repeat center center/cover;
+  }
+  .bd-placeholder-img2{
+    background: url(./img/img2.jpg) 
+    no-repeat center center/cover;
+  }
+  .bd-placeholder-img3{
+    background: url(./img/img3.jpg) 
+    no-repeat center center/cover;
+  }
+
+  .carousel-indicators{
+      bottom: 2rem;
+  }
+  .carousel-indicators li{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+
+  }
+
+  .title{
+      line-height: 2.8rem;
+      font-size: 2.5rem;
+  }
+
+
+.mini-box{
+    width: 213px;
+    height: 247px;
+}
+.bg-1{
+  background: url(./img/img4.jpg)  no-repeat center center/cover;
+}
+.bg-2{
+  background: url(./img/img5.jpg)  no-repeat center center/cover;
+}
+.bg-3{
+  background: url(./img/img6.jpg)  no-repeat center center/cover;
+}
+.bg-4{
+  background: url(./img/img7.jpg)  no-repeat center center/cover;
+}
+
+
+
+  @media (min-width: 769px) {
+    .title {
+      font-size: 3rem;
+      line-height: 3.3rem;
+    }
+    #carousel-blink{
+    display: none;
+  }
+
+
+  }
+
+
+  @media (max-width: 768px) {
+    .sm-display{
+      display: none;
+    }
+    .welcome-img{
+      width: 90vw;
+    }
+    
+  }
+
+
+  @media (max-width: 767px) {
+     .img-flat{
+      display: none;
+    }
+    .title{
+      font-size: 3rem;
+    }
+
+  }
+
+
+
+
+.ash-bg{
+    background:rgba(13, 16, 46, 0.569) ;
+}
+
+.guide-card{
+    width: 270px;
+    height: 366px;
+}
+
+.faded-text{
+    color: rgba(0, 4, 35, 0.502);
+    font-size: 14px;
+}
+
+.img-box{
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 992px) {
+
+   .no-border{
+       border: none !important;
+   } 
+}
+
+.dots{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #FD9B6A;
+}
+
+.img-box-container{
+  position: relative;
+  height: 600px; 
+
+}
+
+.box-row{
+  height: 680px; 
+  position: absolute;
+  top: 5%;
+}
+
+.organise{
+  margin-bottom: 10rem !important;
+}
+
+
+/* contact page styles */
+
+.bg-img{
+  background: url(./img/write-593333_1920\ 2.png) 
+  no-repeat center center/cover;
+  height: 560px;
+}
+
+.translate{
+  transform:translateY(-150px);
+}
+
+.form-control .border-dark{
+  border-color: #0d102e; 
+  background-color: transparent !important;
+}
+
+.form-control:focus {
+  background-color: #fff;
+  border-color: #0d102e;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(13, 16, 46, 0.69);
+}
+
+
+textarea{
+  resize: none;
+  height: 200px !important;
+}
+
+textarea.sm{
+  resize: none;
+  height: 100px !important;
+}
+
+
+.big-title{
+  font-weight: 600;
+font-size: 4rem;
+line-height: 4.875rem;
+}
+
+
+
+/* registeration page styling */
+
+.body-view{
+  height: 700px;
+  position: relative;
+}
+
+#wave-bg{
+  background: url(./img/wave.svg) 
+  no-repeat center center/cover;
+ height: 600px;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+}
+#wave-sm{
+  background: url(./img/wave-sm.svg) 
+  no-repeat center center/cover;
+ height: 400px;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+}
+
+#wave-bg nav,#wave-sm nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 550;
+}
+
+.random-design{
+  position: relative;
+}
+
+.rand-box{
+  z-index: -25;
+  position: absolute;
+  top:1700px;
+  left: 0px;
+}
+.rand-circle{
+  z-index: -25;
+  position: absolute;
+  top:591px;
+  right: 0;
+}
+.circular-fill{
+  z-index: -25;
+  opacity: 0.7;
+  position: absolute;
+  top:440px;
+ left: 0;
+}
+
+@media (max-width: 768px) {
+  .rand-box{
+    top: 2000px;
+  }
+
+  .rand-circle{
+  opacity: 0.4;
+  }
+}
+
+.form-row{
+  max-width: 720px;
+  margin: auto;
+}
+
+
+
+/* FAQ PAGE SYLING */
+
+.body-view-2{
+  height: 500px;
+  position: relative;
+}
+
+#wave-sm{
+  background: url(./img/wave-sm.svg) 
+  no-repeat center center/cover;
+ height: 400px;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+}
+
+#wave-sm nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 550;
+}
+
+.plus{
+  transition: transform 0.3s;
+}
+
+.down{
+  transform: rotate(45deg);
+  background: #573F7B;
+  border-color: #573F7B;
+}
+
+.down:focus{
+  box-shadow: 0 0 0 0.2rem #573f7bbe;
+}
+
+
+
+/* Admin Sign Up page */
+
+.bg-none{
+  background: none;
+}
+.signup-card{
+  width: 450px;
+}
+
+.border-dark{
+  border-color: #0d102e !important;
+}
+
+/* form email and password inputs area */
+ .form-gp{
+  display: flex;  
+  align-items:center;
+  border:  2px solid  #0d102e86;
+  width: 100%;
+  padding: 0.4rem 0.7rem;
+  margin: 1rem 0;
+}
+ .form-gp input{
+  border: none;
+  color: #0d102e;
+  margin-left: 1.4rem;
+  width: auto;
+}
+
+.form-gp input:focus{
+  outline: none ;
+  border: none ;
+}
+.form-gp:focus{
+  border-color: #0d102e ;
+}
+.form-gp svg{
+  height: 17px;
+}
+
+
+.d-box1{
+  z-index: -25;
+  position: absolute;
+  top:60%;
+  left: 0; 
+}
+.d-box2{
+   z-index: -25;
+  position: absolute;
+  top:80px;
+  right: 0; 
+}
+
+/* #surf_image{
+display: none;
+} */
