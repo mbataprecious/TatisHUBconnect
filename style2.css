@@ -15,7 +15,7 @@
 
 #section-two{
     background-color: #FFDECE;
-    height: 400px;
+    min-height: 400px;
 }
 
 .welcome-title h1{
@@ -40,15 +40,18 @@ p{
 }
 
 .underline{
+    transform: translate(120px, 6px);
     height: 15px;
     width: 120px;
     background-color: #FD9B6A;
-    top: 20px;
     z-index: 1;
 }
 
 .z-1{
     z-index: 5;
+}
+.service-text{
+    transform: translate(200px, );
 }
 
 @media (max-width:  992px) {
@@ -109,3 +112,13 @@ p{
   .carousel-indicators .active{
       background-color: #FD9B6A;
   }
+
+  .carousel-item {
+    height: 20rem;
+  }
+
+  .carousel-indicators {
+    bottom: 0rem;
+}
+
+
